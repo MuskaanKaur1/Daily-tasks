@@ -1,0 +1,115 @@
+
+Q1) Write a python program for the following pattern using for loop
+
+*******
+******
+*****
+****
+***
+**
+*
+
+# Loop that starts from 6 and decrements by 1 until it reaches 1
+for i in range(6, 0, -1):
+    # Print a string of '*' characters. The number of '*' is equal to the current value of i
+    print('*' * i)
+
+
+
+Q2) Write a python program for the following pattern using for loop
+
+----*
+---**
+--***
+-****
+*****
+
+# Loop that starts from 1 and increments by 1 until it reaches 5 (not inclusive of 6)
+for i in range(1, 6):
+    # Print spaces followed by asterisks
+    # ' ' * (5 - i) creates the leading spaces. As i increases, the number of spaces decreases.
+    # '*' * i creates the stars. As i increases, the number of stars increases.
+    print(' ' * (5 - i) + '*' * i)
+
+Q3) Write a python program for the following pattern using for loop
+1
+10
+101
+1010
+10101
+
+
+# Loop that starts from 1 and increments by 1 until it reaches 5 (not inclusive of 6)
+for i in range(1, 6):
+    # Create a list of '1' and '0' based on the condition for each j in the range from 1 to i (inclusive)
+    # The ternary expression ['1' if j % 2 == 1 else '0' for j in range(1, i+1)] generates the pattern.
+    # It adds '1' if j is odd (j % 2 == 1) and '0' if j is even.
+    # After the list comprehension, join the list into a string with ''.join().
+    print(''.join(['1' if j % 2 == 1 else '0' for j in range(1, i + 1)]))
+
+
+Q4) Write a python program for the following pattern using for loop
+
+____1
+___01
+__101
+_0101
+10101
+
+# Loop that starts from 1 and increments by 1 until it reaches 5 (not inclusive of 6)
+for i in range(1, 6):
+    # Print leading spaces followed by the alternating pattern of '1' and '0'
+    
+    # ' ' * (5 - i) creates the leading spaces. As i increases, the number of spaces decreases.
+    # This ensures that the pattern will be right-aligned.
+    # For example, when i is 1, there will be 4 spaces; when i is 2, there will be 3 spaces, and so on.
+    
+    # ''.join(['1' if j % 2 == 1 else '0' for j in range(1, i + 1)]) generates the alternating pattern of '1's and '0's.
+    # The list comprehension iterates over the range from 1 to i (inclusive).
+    # For each j:
+    # - If j is odd (j % 2 == 1), it adds '1'.
+    # - If j is even (j % 2 == 0), it adds '0'.
+    # ''.join() combines the list of '1's and '0's into a single string.
+    
+    print(' ' * (5 - i) + ''.join(['1' if j % 2 == 1 else '0' for j in range(1, i + 1)]))
+
+
+
+
+Q5) Write a python program for the following pattern using for loop
+
+*********
+-*******-
+--*****--
+---***---
+----*----
+
+# Function to print inverted full pyramid pattern
+def inverted_full_pyramid(n):
+    # Outer loop for the number of rows
+    for i in range(n, 0, -1):
+        # Inner loop for leading spaces in each row
+        for j in range(n - i):
+            print(" ", end="")
+        # Inner loop for printing asterisks in each row
+        for k in range(2*i - 1):
+            print("*", end="")
+        # Move to the next line after each row
+        print("")
+
+# Set the value of n (number of rows)
+n = 5
+
+# Call the function to print the inverted full pyramid
+inverted_full_pyramid(n)
+
+
+
+
+
+
+
+
+
+
+
