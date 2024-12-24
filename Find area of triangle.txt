@@ -1,0 +1,18 @@
+Q). Python program to find the area of a triangle whose sides are given
+
+
+import math
+
+# Sides of the triangle
+a = 3
+b = 4
+c = 5
+
+# Calculate the 
+s = (a + b + c) / 2
+
+# Calculate the area 
+area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+# Output the area
+print(area)

@@ -1,0 +1,15 @@
+
+Q). Python program to convert the temperature in degree centigrade to Fahrenheit
+
+
+# To convert Celsius to Fahrenheit
+def perform(degree):
+    fahrenheit = (degree * 9/5) + 32
+    return fahrenheit
+
+# Example usage
+degree = float(input("Enter temperature in Celsius: "))
+fahrenheit = perform(degree)
+
+# Output the result
+print(fahrenheit)

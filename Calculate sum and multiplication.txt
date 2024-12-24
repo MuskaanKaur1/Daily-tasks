@@ -1,0 +1,14 @@
+Q1. Calculate the multiplication and sum of two numbers
+
+
+# Declare two variables
+number1 = 15
+number2 = 12
+
+# To calculate the sum and multiplication
+sum_result = number1 + number2
+multiplication_result = number1 * number2
+
+# Print the result
+print("Sum:", sum_result)
+print("Multiplication:", multiplication_result)

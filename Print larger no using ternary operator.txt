@@ -1,0 +1,13 @@
+
+Q). Declare two variables and print that which variable is largest using ternary operators
+
+
+# Declare two variables
+number1 = 10
+number2 = 20
+
+# Use ternary operator to find the largest number
+largest_number = number1 if number1 > number2 else number2
+
+# Print the result
+print(largest_number)
