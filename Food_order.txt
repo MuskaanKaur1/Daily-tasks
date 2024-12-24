@@ -1,0 +1,65 @@
+1.Create an application for hotel to take an food order in a system.
+
+
+# A simple hotel food ordering system using a while loop
+
+def menu():
+    print("Select 1 for Starters\nSelect 2 for Main Course\nSelect 3 for Desserts\nSelect 4 for Soft Drinks\nSelect 5 to exit")
+
+def starters():
+    print("Select 1 for Paneer Manchurian 150 Rs\nSelect 2 for Chilli Gobi 80 Rs \nSelect 3 for Crispy Corn Kebab 50 Rs\nSelect 4 for Manchurian Soup 120 Rs\nSelect 5 for Sweet Corn Soup 100 Rs\nSelect 6 for Spring Rolls 150 Rs")
+    return {1: 150, 2: 80, 3: 50, 4: 120, 5: 100, 6: 150, 7: 130}
+
+def mainCourse():
+    print("Select 1 for Palak Paneer 220 Rs\nSelect 2 for Paneer Tikka Masala 250 Rs\nSelect 3 for Aloo Gobi 150 Rs\nSelect 4 for Dal Makhani 200 Rs\nSelect 5 for Paneer Bhurji 150 Rs\nSelect 6 for Sarso ka Saag 180 Rs\nSelect 7 for Dal Tadka 100 Rs")
+    return {1: 220, 2: 250, 3: 150, 4: 200, 5: 150, 6: 180, 7: 100}
+
+def desserts():
+    print("Select 1 for Gulab Jamun 80 RsSelect 2 for Rasgulla 120 Rs\nSelect 3 for Icecream 100 Rs\nSelect 4 for Custard 150 Rs\nSelect 5 for Pastries 130 Rs\nSelect 6 for Rasmalai 150 Rs")
+    return {1: 80, 2: 120, 3: 100, 4: 150, 5: 130, 6: 150}
+
+def softDrinks():
+    print("Select 1 for Coca-Cola 100 Rs\nSelect 2 for Pepsi 80 Rs\nSelect 3 for Sprite 120 Rs\nSelect 4 for Appy Fizz 80 Rs\nSelect 5 for Limca 150 Rs\nSelect 6 for Mirinda 100 Rs")
+    return {1: 100, 2: 80, 3: 120, 4: 80, 5: 150, 6: 100}
+
+def take_order(menu_choice):
+    if menu_choice == 1:
+        items = starters()
+    elif menu_choice == 2:
+        items = mainCourse()
+    elif menu_choice == 3:
+        items = desserts()
+    elif menu_choice == 4:
+        items = softDrinks()
+    else:
+        print("Invalid choice")
+        return 0
+
+    item_choice = int(input("Enter the number of the item you want to order: "))
+    if item_choice in items:
+        print(f"You ordered item {item_choice} for {items[item_choice]} Rs")
+        return items[item_choice]
+    else:
+        print("Invalid item choice")
+        return 0
+
+def main():
+    total_bill = 0
+    while True:
+        menu()
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Please enter a valid number.")
+            continue
+
+        if choice == 5:
+            print("Your total bill is: ", total_bill, "Rs")
+            break
+        else:
+            item_cost = take_order(choice)
+            total_bill += item_cost
+        
+
+if __name__ == "__main__":
+    main()
