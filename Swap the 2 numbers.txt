@@ -1,0 +1,11 @@
+Q). Using input function take two number and then swap the number
+
+# Taking input from the user for two numbers
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+
+# Swap the numbers
+number1, number2 = number2, number1
+
+# Print the swapped numbers
+print(f"After swapping: First number = {number1}, Second number = {number2}")
