@@ -1,0 +1,13 @@
+Q). Declare a square() function with one parameter. Then call the function and pass one
+number and display the square of that number.
+
+# Function to calculate the square of a number
+def square(number):
+    return number*number
+
+# Taking input from the user
+number = int(input("Enter a number: "))
+
+# Calling the square function and displaying the result
+result = square(number)
+print("The square of", number, "is:", result)
