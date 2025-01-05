@@ -1,0 +1,16 @@
+Write a Python Count vowels in a string
+input= “Welcome to Python Assig"
+
+
+
+# Given input string
+input_string = "Welcome to Python Assig"
+
+# Count vowels in the string
+vowel_count = 0
+for char in input_string:
+    if char.lower() in 'aeiou':  # Check if the character is a vowel
+        vowel_count += 1
+
+# Print the result
+print("Number of vowels:", vowel_count)

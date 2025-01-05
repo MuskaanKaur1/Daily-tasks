@@ -1,0 +1,14 @@
+ Q) Write a Python program to remove duplicate characters of a given string.
+Input = “String and String Function”
+Output: String and Function
+
+
+
+# Given input string
+input_string = "String and String Function"
+
+# Split the string into words and remove duplicates
+output_string = ' '.join(dict.fromkeys(input_string.split()))
+
+# Print the result
+print(output_string)
